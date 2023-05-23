@@ -1,0 +1,12 @@
+{
+    "quickDoc": {
+        "acceptedExtensions": [".js", ".py"]
+    },
+    "notifications": false,
+    "langs": ["javascript"],
+    "api": {
+        "name": "dev-docs",
+        "baseUrl": "http://localhost:3000",
+        "defaultRegex": "flask"
+    }
+}

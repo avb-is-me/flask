@@ -1,0 +1,94 @@
+{
+  "info": {
+    "name": "dev-docs"
+  },
+  "item": [
+    {
+      "name": "Get Cool Stuff",
+      "request": {
+        "description": "Gets all the cool stuff in a nice json response",
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:3000/cool",
+          "host": "localhost:3000",
+          "path": [
+            "cool"
+          ],
+          "query": []
+        },
+        "body": {
+          "mode": "raw",
+          "raw": {}
+        },
+        "schema": null
+      },
+      "response": [
+        {
+          "code": "200",
+          "body": "{\"message\": \"creates good response\"}",
+          "description": "good response"
+        }
+      ]
+    },
+    {
+      "name": "Creates an item at the index",
+      "request": {
+        "description": "Index Post item",
+        "method": "POST",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:3000",
+          "host": "localhost:3000",
+          "path": [
+            ""
+          ],
+          "query": []
+        },
+        "body": {
+          "mode": "raw",
+          "raw": {}
+        },
+        "schema": null
+      },
+      "response": []
+    },
+    {
+      "name": "Order Validation",
+      "request": {
+        "description": "The request object containing information about the customer and order needed by Forter in order to provide a decision",
+        "method": "POST",
+        "header": [
+          {
+            "key": "accept",
+            "value": "application/json"
+          },
+          {
+            "key": "api-version",
+            "value": "2.0"
+          },
+          {
+            "key": "content-type",
+            "value": "application/json"
+          }
+        ],
+        "url": {
+          "raw": "http://localhost:3000/v2/orders/{id}",
+          "host": "localhost:3000",
+          "path": [
+            "v2",
+            "orders",
+            "%7Bid%7D"
+          ],
+          "query": []
+        },
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"orderId\": \"2356fdse0rr489\",\n  \"orderType\": \"WEB\",\n  \"authorizationStep\": \"PRE_AUTHORIZATION\",\n  \"additionalIdentifiers\": {\n    \"additionalOrderId\": \"4306795\",\n    \"isSplitOrder\": false,\n    \"splitOrderIds\": [\n      \"6543545\",\n      \"6545635\"\n    ],\n    \"orderSegment\": \"Regular Checkout\",\n    \"paymentGatewayId\": \"5TG23432562\",\n    \"merchant\": {\n      \"merchantId\": \"eh629dK9\",\n      \"merchantDomain\": \"HandbagsExpressDiscounts.com\",\n      \"merchantName\": \"Handbags Express Discounts\"\n    },\n    \"siteLocalization\": {\n      \"country\": \"FR\",\n      \"language\": \"EN\",\n      \"currency\": \"USD\"\n    }\n  },\n  \"timeSentToForter\": 1415287568000,\n  \"checkoutTime\": 1415273168,\n  \"connectionInformation\": {\n    \"customerIP\": \"10.0.0.127\",\n    \"userAgent\": \"Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/47.0.2526.73 Safari/537.36\",\n    \"forterTokenCookie\": \"2315688945984\"\n  },\n  \"totalAmount\": {\n    \"amountUSD\": \"99.95\",\n    \"amountLocalCurrency\": \"105.55\",\n    \"currency\": \"CAD\"\n  },\n  \"totalDiscount\": {\n    \"couponCodeUsed\": \"FATHERSDAY2015\"\n  },\n  \"accountOwner\": {\n    \"fullName\": \"Smith\",\n    \"email\": \"john_s@test.com\",\n    \"accountId\": \"e520-ba9a-367-60b\",\n    \"created\": 1415273168,\n    \"pastOrdersCount\": 51,\n    \"pastOrdersSum\": 1702.5,\n    \"lastLoginIP\": \"203.12.55.12\",\n    \"registrationIP\": \"203.12.55.12\"\n  },\n  \"customerAccountData\": {\n    \"personalDetails\": {\n      \"fullName\": \"John Smith\",\n      \"middleInitials\": \"R. H.\",\n      \"prefix\": \"Mr.\",\n      \"suffix\": \"Jr.\",\n      \"email\": \"john_s@test.com\",\n      \"accountId\": \"e520-ba9a-367-60b\",\n      \"username\": \"johnsm98\"\n    },\n    \"created\": 1415273168,\n    \"type\": \"BUSINESS\",\n    \"status\": \"ACTIVE\",\n    \"merchantAccountStatus\": \"open\",\n    \"statusChangeBy\": \"MERCHANT_ADMIN\",\n    \"statusChangeReason\": \"user violation of coupon abuse policy\",\n    \"passwordData\": {\n      \"hashedPassword\": \"dFjKl2390fjl9!djk\",\n      \"latestPasswordResetEmailDate\": 1420294711\n    },\n    \"isManagedAccount\": false,\n    \"assetsInAccount\": {\n      \"storeCreditsInAccount\": {\n        \"amountUSD\": \"99.95\",\n        \"amountLocalCurrency\": \"105.55\",\n        \"currency\": \"CAD\"\n      }\n    },\n    \"customerEngagement\": {\n      \"likedItems\": {\n        \"inUse\": true,\n        \"itemInListCount\": 4\n      },\n      \"sharedItems\": {\n        \"inUse\": true,\n        \"itemInListCount\": 4\n      },\n      \"wishlist\": {\n        \"inUse\": true,\n        \"itemInListCount\": 4\n      },\n      \"reviewsWritten\": {\n        \"inUse\": true,\n        \"itemInListCount\": 4\n      },\n      \"communityPostsWritten\": {\n        \"inUse\": true,\n        \"itemInListCount\": 4\n      },\n      \"messagesSent\": {\n        \"inUse\": true,\n        \"itemInListCount\": 4\n      },\n      \"messagesReceived\": {\n        \"inUse\": true,\n        \"itemInListCount\": 4\n      },\n      \"followersCount\": 105,\n      \"followingCount\": 230,\n      \"profilePicture\": true,\n      \"aboutMe\": false,\n      \"extendedBioOrDescription\": false,\n      \"profileLogo\": false\n    },\n    \"customerService\": {\n      \"contactTime\": 1430997968,\n      \"orderId\": \"4306795\",\n      \"ticketId\": \"4306795\",\n      \"initiatedBy\": \"MERCHANT\",\n      \"contactMethodType\": \"PHONE\",\n      \"contactNameUsed\": {\n        \"customerContactNameType\": \"CARDHOLDER\",\n        \"customerFirstName\": \"John\",\n        \"customerLastName\": \"Smith\"\n      },\n      \"contactPhoneUsed\": {\n        \"merchantContactedPhoneRole\": \"BILLING_PHONE\",\n        \"merchantContactedPhoneNumber\": \"212-555-5555\"\n      },\n      \"contactEmailUsed\": {\n        \"merchantContactedEmailRole\": \"BILLING_EMAIL\",\n        \"merchantContactedEmail\": \"jsmith@gmail.com\"\n      },\n      \"contactCustomerIP\": \"10.0.0.127\",\n      \"customerSupportFurtherVerification\": {\n        \"customerSupportAdditionalVerificationDocuments\": {\n          \"documentFirstName\": \"John\",\n          \"documentLastName\": \"Smith\",\n          \"documentType\": \"Passport\",\n          \"nationality\": \"US\",\n          \"documentVerified\": true\n        },\n        \"customerSupportSMSverification\": \"+1-212-555-5555\",\n        \"customerAnsweredSecurityQuestions\": true\n      },\n      \"customerSupportChangeOrderDetails\": {\n        \"customerSupportRequestPickupStoreZip\": \"94104\",\n        \"customerSupportRequestPickupFromShippingCarrier\": false,\n        \"customerSupportRequestSwitchBillingAndShipping\": false\n      }\n    },\n    \"sellingBehaviourData\": {\n      \"sellerDetails\": {\n        \"sellerPersonalDetails\": {\n          \"fullName\": \"John Smith\",\n          \"middleInitials\": \"R. H.\",\n          \"prefix\": \"Mr.\",\n          \"suffix\": \"Jr.\",\n          \"email\": \"john_s@test.com\",\n          \"accountId\": \"e520-ba9a-367-60b\",\n          \"username\": \"johnsm98\"\n        },\n        \"type\": \"BUSINESS\",\n        \"status\": \"ACTIVE\",\n        \"ratingAsBuyer\": {\n          \"score\": \"4.5\",\n          \"type\": \"INTERNAL_PEERS\",\n          \"source\": \"yelp\"\n        },\n        \"taxExempt\": false,\n        \"verifiedSeller\": true,\n        \"dateVerified\": 1430997968,\n        \"dateOfFirstSale\": 1430997968,\n        \"sellerAccountCreationDate\": 1415273168,\n        \"sellerPastSalesCount\": 8,\n        \"sellerPastSalesSum\": {\n          \"amountUSD\": \"99.95\",\n          \"amountLocalCurrency\": \"105.55\",\n          \"currency\": \"CAD\"\n        },\n        \"availableFundsForWithdrawal\": {\n          \"amountUSD\": \"99.95\",\n          \"amountLocalCurrency\": \"105.55\",\n          \"currency\": \"CAD\"\n        },\n        \"sellerReturnsCount\": 2,\n        \"sellerInitiatedDisputesCount\": 1,\n        \"buyerInitiatedDisputesCount\": 6,\n        \"sellerLostDisputesCount\": 0,\n        \"paidForPromotion\": false,\n        \"sellerRegistrationIP\": {\n          \"ip\": \"10.0.0.128\",\n          \"updateTimes\": {\n            \"creationTime\": 1448549922,\n            \"removalTime\": 1448895522\n          }\n        },\n        \"sellerLastLoginIP\": {\n          \"ip\": \"10.0.0.128\",\n          \"updateTimes\": {\n            \"creationTime\": 1448549922,\n            \"removalTime\": 1448895522\n          }\n        }\n      },\n      \"itemsCurrentlyListedForSale\": 5,\n      \"sellerVerificationCreditCard\": {\n        \"nameOnCard\": \"John R. H. Smith\",\n        \"fullCreditCard\": \"2424242424242424\",\n        \"threeDSecure\": {\n          \"acquirerData\": {\n            \"acquirerName\": \"Barclays\",\n            \"acquirerBIN\": \"457173\",\n            \"acquirerMerchantId\": 5245020244654,\n            \"acquirerMerchantName\": \"Simple T-shirt\",\n            \"merchantCategoryCode\": 5655,\n            \"merchantCountryCode\": 840,\n            \"acquirerCountry\": \"US\"\n          },\n          \"threeDSServerTransID\": \"26d648a9-da8a-4f8b-a76d-094801d2fd45\",\n          \"scaOutOfScope\": \"ANONYMOUS_PREPAID_CARD\",\n          \"scaExemption\": \"TRUSTED_BENEFICIARY\",\n          \"execute3ds\": \"DYNAMIC_FORTER_DECISION\"\n        },\n        \"cardBrand\": \"VISA\",\n        \"bin\": \"42424242\",\n        \"lastFourDigits\": \"4242\",\n        \"expirationMonth\": \"03\",\n        \"expirationYear\": \"2018\",\n        \"cardType\": \"CREDIT\",\n        \"countryOfIssuance\": \"US\",\n        \"cardBank\": \"Chase\",\n        \"fingerprint\": \"Xt5EWLLDS7FJjR1c\",\n        \"verificationResults\": {\n          \"cvvResult\": \"M\",\n          \"avsZipResult\": \"M\",\n          \"avsNameResult\": \"M\",\n          \"avsFullResult\": \"Y\",\n          \"authorizationCode\": \"A33244\",\n          \"processorResponseCode\": \"D23\",\n          \"processorResponseText\": \"Stolen card\",\n          \"authorizationPolicy\": \"3DSecure\",\n          \"cavvResult\": \"VYboNwcsB3F9gTIsbaUjvEuLW0o=\",\n          \"eciValue\": \"05\",\n          \"threeDsStatus\": \"Cardholder authenticated\",\n          \"threeDsStatusCode\": \"Y\",\n          \"threeDsStatusReasonCode\": \"15\",\n          \"liabilityShift\": true,\n          \"threeDsVersion\": \"2.1.0\",\n          \"threeDsInteractionMode\": \"FRICTIONLESS\",\n          \"threeDsChallengeCancelCode\": \"01\",\n          \"authorizationProcessedWith3DS\": true,\n          \"partyExecuted3DS\": \"PSP\",\n          \"authenticationChallengeStartTime\": 1586277568000,\n          \"authenticationTriggered\": false,\n          \"authenticationMethodType\": \"THREE_DS\",\n          \"exemptionStatus\": \"accepted\"\n        },\n        \"paymentGatewayData\": {\n          \"gatewayName\": \"Braintree\",\n          \"gatewayTransactionId\": \"fjdsS46sdklFd20\"\n        },\n        \"paymentProcessorData\": {\n          \"processorName\": \"Chase Paymentech\",\n          \"processorTransactionId\": \"fjdsS46sdklFd20\"\n        },\n        \"paymentAcquirerData\": {\n          \"acquirerName\": \"Barclays\",\n          \"acquirerBIN\": \"457173\",\n          \"acquirerMerchantId\": 5245020244654,\n          \"acquirerMerchantName\": \"Simple T-shirt\",\n          \"merchantCategoryCode\": 5655,\n          \"merchantCountryCode\": 840,\n          \"acquirerCountry\": \"US\"\n        }\n      }\n    }\n  },\n  \"historicalData\": {\n    \"orderStatus\": \"PROCESSING\",\n    \"merchantOrderStatus\": \"Shipped\",\n    \"fraud\": \"FRAUD_CHARGEBACK\"\n  }\n}"
+        },
+        "schema": null
+      },
+      "response": []
+    }
+  ]
+}

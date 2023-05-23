@@ -4,9 +4,29 @@ import os
 app = Flask(__name__)
 
 
-@app.route('/')
+@app.route('/', methods=['POST'])
 def index():
-    return jsonify({"Choo Choo": "Welcome to your Flask app 🚅"})
+    return jsonify({"message": "This is the index"})
+
+@app.route('/v2/orders/{id}', methods=['POST'])
+def index():
+    return jsonify({"message": "this is the orders route"})
+
+@app.route('/v2/accounts/{id}', methods=['POST'])
+def index():
+    return jsonify({"message": "this is the accounts route"})
+
+@app.route('/v2/status/{id}', methods=['POST'])
+def index():
+    return jsonify({"message": "this is the status route"})
+
+@app.route('/v2/claims', methods=['POST'])
+def index():
+    return jsonify({"message": "this is the claims route"})
+
+@app.route('/cool')
+def cool():
+    return jsonify({"message": "this is the cool route"})
 
 
 if __name__ == '__main__':
